@@ -37,11 +37,7 @@ if __name__ == '__main__':
         if records[i][0] == numcode :
                 
             name = records[i][1]
-            print(name) #<<<use this for Answer.
+            print(name) 
                 
         i += 1
-            
 
-    
-    #print(records)
-    #print()
