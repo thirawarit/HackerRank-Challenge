@@ -18,8 +18,8 @@ if __name__ == '__main__':
         global i
         global codename
         a_min = a[0][0]
-        i = 0
-        for _ in range(len(a)) :
+
+        for i in range(len(a)) :
             
             if a[i][0] > a_min :
                 codename = a[i][0]
