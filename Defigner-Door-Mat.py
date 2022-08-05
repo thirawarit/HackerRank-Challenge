@@ -5,3 +5,9 @@ for n in range(row//2) :      #Take loop n  by 0,1,2,...,int(row)
 print('WELCOME'.center(columm,'-'))
 for n in range(row//2,0,-1) :    #Take reverse loop n by int(row), ..., 2, 1, 0
     print(('.|.'*(2*n-1)).center(columm,'-'))
+
+#--------------------------------------------------------
+
+print(' ')
+pattern = [('.|.'*(2*n+1)).center(columm,'-') for n in range(row//2)]
+print('\n'.join(pattern+['WELCOME'.center(columm,'-')]+pattern[::-1]))
