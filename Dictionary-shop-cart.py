@@ -23,20 +23,15 @@ CANDY 20
 '''
 num_item = int(input())
 dict_shop = {}                                  #Dict for collection
-for i in range(num_item):
-    data_input = input().split()        #split to list 2-3 values maybe...
-    box = []                 # containing all texts probably are item name.
-    for j in data_input:
-        if j.isalpha():
-            box.append(j)
-        elif j.isdigit():
-            item_name = ' '.join(box) #list is inserted between seperate
-            dict_shop.setdefault(item_name, 0) #setdefault if keyword is in the dict it will pass. 
-            dict_shop[item_name] += int(j) #add value in keyword
+for _ in range(num_item):
+    item_name, space, price = input().rpartition(' ')        #split to list 2-3 values maybe...
+    dict_shop.setdefault(item_name, 0) #setdefault if keyword is in the dict it will pass. 
+    dict_shop[item_name] += int(price) #add value in keyword
 '''
 [NameDict].items() is one of dictionary methods, 
 Returns a list containing a tuple for each key-value pair.
 You can use this method and for-loop together to show both keywords and values.
 '''
+print("============================")
 for x, y in dict_shop.items():
-    print(x,y)                      
+    print(x, y)                      
