@@ -1,11 +1,11 @@
 '''
 
 Sample Input
- 1 2
- 3 4
- ==================
+1 2
+3 4
+==================
 Sample Output
- (1, 3) (1, 4) (2, 3) (2, 4)
+(1, 3) (1, 4) (2, 3) (2, 4)
  
 '''
 # Enter your code here. Read input from STDIN. Print output to STDOUT
