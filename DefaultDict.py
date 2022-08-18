@@ -28,7 +28,7 @@ b
 a
 a
 b
-c
+c 
 ==== OUTPUT ====
 1 2 4 7 8 10
 3 5 6 9
@@ -43,6 +43,7 @@ size_a, size_b = map(int,input().split())
 result = defaultdict(list)  #{_:[...], _:[...]}
 for i in range(1,size_a+1):
     result[input()].append(i)  #{a:[1, 3, ...], b:[2, 4, ...]}
-for _ in range(size_b):
-    box = input()
-    print(*result[box]) if box in result else print(-1)
+box = [input() for _ in range(size_b)]
+for i in box:
+    print(*result[i]) if i in result else print(-1)
+print(result.values())
