@@ -42,7 +42,5 @@ NOTE: There is no penalty for solutions that are correct but have more than 4 li
 '''
 from collections import namedtuple as namtu
 n, doc_id, result = int(input()), namtu('doc_id', input().split()), 0
-for _ in range(n):
-    iden = doc_id(*input().split())
-    result += int(iden.MARKS)
+for _ in range(n): result += int(doc_id(*input().split()).MARKS)
 print('{:.2f}'.format(result/n))
