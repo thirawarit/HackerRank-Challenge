@@ -48,22 +48,19 @@ def sockMerchant(n, ar):
     ar.sort()       #[10,10,10,10,20,20,20,30,50]
     temp = 0        #attribute for tracking
     pair = 0        #attribute for count
-    for x in ar:
-        if (x == temp):
-            pair += 1
-            temp = 0
-        else:
-            temp = x
+    for x in ar:            #get each item 
+        if x == temp:       #ex. x = 10 : 10 == 0 FALSE
+            pair += 1       #
+            temp = 0        #
+        else:               #
+            temp = x        #temp = 10
     return(pair)
 
             
         
 
 if __name__ == '__main__':
-
     n = int(input().strip())
-
     ar = list(map(int, input().rstrip().split()))
-
     result = sockMerchant(n, ar)
     print(result)
