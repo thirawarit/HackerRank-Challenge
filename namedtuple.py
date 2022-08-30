@@ -46,3 +46,11 @@ from collections import namedtuple as namtu
 n, doc_id, result = int(input()), namtu('doc_id', input().split()), 0
 for _ in range(n): result += int(doc_id(*input().split()).MARKS)
 print('{:.2f}'.format(result/n))
+
+'''
+#another solutions
+from collections import namedtuple as namtu
+n, doc_id = int(input()), namtu('doc_id', input().split())
+result = sum(map(lambda x: int(x.MARKS), [doc_id(*input().split()) for _ in range(n)]))
+print('{:.2f}'.format(result/n))
+'''
