@@ -1,0 +1,25 @@
+import numpy
+
+def arrays(arr):
+    '''They are similar to lists, -
+        except that every element of an array must be the same type'''
+    # numpy.array() is used to convert alist into a Numpy array.
+    # the 2nd arguement (float) can be used to set the type of array           elements.
+    return(numpy.array(list(reversed(arr)), float))
+
+arr = input().strip().split(' ')
+result = arrays(arr)
+print(result)
+'''
+Task
+You are given a space separated list of numbers. 
+Your task is to print a reversed NumPy array with the element type float.
+Input Format
+A single line of input containing space separated numbers.
+Output Format
+Print the reverse NumPy array with type float.
+Sample Input
+1 2 3 4 -8 -10
+Sample Output
+[-10.  -8.   4.   3.   2.   1.]
+'''
