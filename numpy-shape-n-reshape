@@ -1,0 +1,19 @@
+import numpy
+''' the shape tool gives a tuple of array dimensions 
+    and can be used to change the dimensions of an array.'''
+#1. Using shape to get array dimensions
+#2. Using shape to change array dimensions
+''' The reshape tool gives a new shape to an array without changing its      data, that does not modify the original array itself.'''
+arr = input().split()
+arr_input = numpy.array(arr, int)
+arr_input.shape = (9,)
+arr_reshape = numpy.reshape(arr_input, (3, 3))
+print(arr_reshape)
+'''
+Sample Input
+1 2 3 4 5 6 7 8 9
+Sample Output
+[[1 2 3]
+ [4 5 6]
+ [7 8 9]]
+ '''
