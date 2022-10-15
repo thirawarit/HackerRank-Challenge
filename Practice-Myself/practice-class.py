@@ -3,7 +3,7 @@
 class Person:
     
     # vvvvvv --attributes
-    # Class Variable
+    # Class Variables
     attr1 = "Human"
     attr2 = "Earth planet"
     name = "Adam"
@@ -12,7 +12,7 @@ class Person:
     # 'class methods' must have an extra first parameter in the method definition
     # init method or constructor
     def __init__(self, name: str):
-        # Instance Variable
+        # Instance Variables
         self.name = name
     
     # 'sample method'
