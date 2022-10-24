@@ -1,7 +1,7 @@
 import re
-from types import NoneType
 def fun(s):
     # return True if s is a valid email, else return False
+    '''
     for i in range(len(s)) :
         userweb_ex = s[i].split('.')
         user_web = userweb_ex[0].split('@')
@@ -15,6 +15,10 @@ def fun(s):
         return(True)
     else:
         return(False)
-    
+    '''
+    return True if re.search("^[\w-]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,3}$", s) else False
+    #return True if re.search("^[\w]+\.[\w\.]+$", s) else False
 s = 'brian23@hackerrank.com'
-fun(s)
+#s = ['1.111']
+x = list(filter(fun, s))
+print(x)
