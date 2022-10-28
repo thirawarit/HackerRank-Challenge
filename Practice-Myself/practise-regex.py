@@ -6,12 +6,28 @@ def rep(s: str) -> str:
     '''
     # (...)\number{}
     # \number being a number of group. Groups are numbered starting from 1.
+    
+    # group(0):22ccc333 | group(1):2 | group(2):c | group(3):3
     pattern = r'([A-Za-z0-9])\1([\w])\2{2}([\w])\3{2}'
     #return -> 22ccc333
-    #pattern = r'([A-Za-z0-9])\1+'
+    # group(0):dddd | group(1):d
+    pattern = r'([A-Za-z0-9])\1+'
     #return -> dddd
+    
     x = re.search(pattern, s)
     return x.group(0)
 
+def plookba(s: str) -> str:
+    '''
+    The positive lookbehind assertion    \n
+    (?<=...) Lookbehind    \n
+    (?=...)  Lookahead    \n
+    '''
+    pattern = r'(?<=[A-Za-z0-9])\w'
+    #return -> dddd
+    
+    x = re.search(pattern, s)
+    return x
+
 s = "1dddd22ccc333bb4444a"
-print(rep(s))
+print(rep(s), plookba(s))
