@@ -21,8 +21,10 @@ def plookba(s: str) -> str:
     '''
     The positive lookbehind assertion    \n
     (?<=...) Lookbehind    \n
-    
+        The lookahead assertion (?<=...) specifies that what is followed by "some words" must be a ... character. \n
     (?=...)  Lookahead    \n
+        The lookahead assertion (?=...) specifies that what follows "some words" must be a ... character. \n
+
     '''
     pattern = r'(?<=[a-zA-Z]{3})\w(?=[a-zA-Z]{3})'
     #return -> dddd
