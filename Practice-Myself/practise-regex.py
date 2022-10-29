@@ -21,13 +21,15 @@ def plookba(s: str) -> str:
     '''
     The positive lookbehind assertion    \n
     (?<=...) Lookbehind    \n
+    
     (?=...)  Lookahead    \n
     '''
-    pattern = r'(?<=[A-Za-z0-9])\w'
+    pattern = r'(?<=[a-zA-Z]{3})\w(?=[a-zA-Z]{3})'
     #return -> dddd
     
-    x = re.search(pattern, s)
+    x = re.findall(pattern, s)
     return x
 
 s = "1dddd22ccc333bb4444a"
-print(rep(s), plookba(s))
+s2 =  "aaa1bbb2ccc"
+print(rep(s), plookba(s2))
