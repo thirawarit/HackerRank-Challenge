@@ -19,7 +19,10 @@ def print_rangoli(size):
     for i in range(size):       #Size : 5 >> [0,1,2,3,4] 5 values
         #Left-Center-Right
 
-        print('-'.join(map(chr,range(97-1+size,97,-1)[:i])).rjust((size)*2-3,'-')+chr(range(97-1+size,97-1,-1)[i]).center(3,'-')+'-'.join(map(chr,range(97,97+size)[size-i:])).ljust((size)*2-3,'-'))
+        print('-'.join(map(chr,range(97-1+size,97,-1)[:i])).rjust((size)*2-3,'-')
+              + chr(range(97-1+size,97-1,-1)[i]).center(3,'-')
+              + '-'.join(map(chr,range(97,97+size)[size-i:])).ljust((size)*2-3,'-')
+              )
         #range >> [e,d,c,b] get position[0:0+]      >> []   >> [e]  >> [e,d]  >> [e,d,c]    >> [e,d,c,b]
         #range >> [e,d,c,b,a] get position[0 to 4]  >> [e]  >> [d]  >> [c]    >> [b]        >> [a]
         #range >> [b,c,d,e] get position[5--:4]     >> []   >> [e]  >> [d,e]  >> [c,d,e]    >> [b,c,d,e]
